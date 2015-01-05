@@ -2,5 +2,8 @@
   "name": "magic-lusca",
   "version": "0.0.1",
   "private": true,
-  "main": "./lusca.js"
+  "main": "./lusca.js",
+  "dependencies": {
+    "magic-utils": "git://github.com/express-magic/magic-utils"
+  }
 }
