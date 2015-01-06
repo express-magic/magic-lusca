@@ -9,13 +9,13 @@ module.exports = function (req, res, next) {
     , defaultOptions = {}
   ;
 
-  if ( typeof lusca === 'object' ) {
-    var options = {};
-
-    utils.each(defaultOptions, function (option, key) {
-      options[key] = option;
-    });
-    utils.log('magic-lusca', 'options', options);
+  if ( typeof luscaOptions === 'object' ) {
+    defaultOptions = utils.mergeConfig(defaultOptions, luscaOptions);
+  }
+  utils.log('magic-lusca', 'options', defaultOptions);
+  
+  if ( luscaOptions ) {
+    log('magic-lusca', 'lusca should activate now');
   }
 
   next();
